@@ -1,0 +1,1 @@
+Letakkan empat dataset asli di folder ini. Dataset belum disertakan. Lihat README.md dan unduh_pima.py.

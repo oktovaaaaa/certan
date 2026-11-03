@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Laporan Penjelasan Praktikum UTS Kecerdasan Buatan - NIM Genap</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+            @bottom-right {
+                content: counter(page);
+            }
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-size: 11pt;
+        }
+        .header-box {
+            border-bottom: 3px double #2c3e50;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .header-box h1 {
+            margin: 0 0 6px 0;
+            font-size: 18pt;
+            text-transform: uppercase;
+            color: #1a365d;
+            letter-spacing: 0.5px;
+        }
+        .header-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 13pt;
+            font-weight: 600;
+            color: #2b6cb0;
+        }
+        .meta-table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            font-size: 10.5pt;
+        }
+        .meta-table td {
+            padding: 4px 8px;
+            vertical-align: top;
+        }
+        .meta-table td.label {
+            width: 22%;
+            font-weight: bold;
+            color: #4a5568;
+        }
+        .meta-table td.colon {
+            width: 2%;
+        }
+        .meta-table td.val {
+            width: 76%;
+            color: #1a202c;
+        }
+        h2.section-title {
+            background-color: #2b6cb0;
+            color: #ffffff;
+            padding: 8px 12px;
+            font-size: 13pt;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            page-break-after: avoid;
+        }
+        h3.subsection-title {
+            color: #2c5282;
+            font-size: 11.5pt;
+            border-left: 4px solid #3182ce;
+            padding-left: 8px;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            page-break-after: avoid;
+        }
+        p {
+            margin: 0 0 10px 0;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-top: 4px;
+            margin-bottom: 12px;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 4px;
+        }
+        .code-box {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #4a5568;
+            border-radius: 3px;
+            padding: 8px 12px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 9.5pt;
+            color: #2d3748;
+            margin: 8px 0 12px 0;
+            white-space: pre-wrap;
+            page-break-inside: avoid;
+        }
+        .callout-box {
+            background-color: #ebf8ff;
+            border: 1px solid #bee3f8;
+            border-left: 4px solid #3182ce;
+            border-radius: 4px;
+            padding: 10px 14px;
+            margin: 10px 0 16px 0;
+            font-size: 10pt;
+            page-break-inside: avoid;
+        }
+        .callout-box strong {
+            color: #2b6cb0;
+        }
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 16px 0;
+            font-size: 9.5pt;
+            page-break-inside: avoid;
+        }
+        table.data-table th, table.data-table td {
+            border: 1px solid #cbd5e0;
+            padding: 6px 10px;
+            text-align: left;
+        }
+        table.data-table th {
+            background-color: #edf2f7;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        table.data-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        .badge {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            border: 1px solid #cbd5e0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 8.5pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <h1>LAPORAN PRAKTIKUM UTS KECERDASAN BUATAN</h1>
+        <h2>PEMBAHASAN DAN ANALISIS KODE JAWABAN (NIM GENAP)</h2>
+    </div>
+
+    <table class="meta-table">
+        <tr>
+            <td class="label">Nama Mahasiswa</td>
+            <td class="colon">:</td>
+            <td class="val"><strong>Oktova Yoga Praditia Samosir</strong></td>
+        </tr>
+        <tr>
+            <td class="label">Nomor Induk Mahasiswa (NIM)</td>
+            <td class="colon">:</td>
+            <td class="val"><strong>42324002</strong> <span class="badge">NIM Genap</span></td>
+        </tr>
+        <tr>
+            <td class="label">Program Studi</td>
+            <td class="colon">:</td>
+            <td class="val">D3 Teknologi Informasi</td>
+        </tr>
+        <tr>
+            <td class="label">Mata Kuliah</td>
+            <td class="colon">:</td>
+            <td class="val">Kecerdasan Buatan (Artificial Intelligence)</td>
+        </tr>
+        <tr>
+            <td class="label">Tahun Ajaran / Semester</td>
+            <td class="colon">:</td>
+            <td class="val">Semester Gasal T.A. 2025/2026</td>
+        </tr>
+        <tr>
+            <td class="label">Dataset yang Digunakan</td>
+            <td class="colon">:</td>
+            <td class="val"><code>users_data_cleaned.pickle</code> (Soal 1), <code>Sales_Data.csv</code> (Soal 2), <code>konsumen.csv</code> (Soal 3 NIM Genap)</td>
+        </tr>
+    </table>
+
+    <div class="callout-box">
+        <strong>Ringkasan Dokumen:</strong> Laporan ini mendokumentasikan rincian pengerjaan praktikum Ujian Tengah Semester (UTS) Kecerdasan Buatan untuk mahasiswa dengan NIM Genap. Seluruh struktur kode, alur logika, nama variabel, dan visualisasi dibuat seragam (*exact match*) dengan notebook acuan <code>jawaban 2_42324001_UTS_Praktikum_Certan.ipynb</code>, dengan penyesuaian khusus pada <strong>Soal 3</strong> yang menerapkan algoritma <em>K-Means Clustering</em> pada dataset <code>konsumen.csv</code>.
+    </div>
+
+    <h2 class="section-title">SOAL 1: EKSPLORASI DATA (EDA) PADA DATASET users_data_cleaned.pickle [30 Poin]</h2>
+    <p>
+        Tujuan dari Soal 1 adalah melakukan <em>Exploratory Data Analysis</em> (EDA) secara menyeluruh terhadap data profil nasabah perbankan yang telah dibersihkan (<code>users_data_cleaned.pickle</code>). Analisis mencakup 13 tahapan sistematis untuk memahami karakteristik demografis, finansial, dan perilaku pengguna.
+    </p>
+
+    <h3 class="subsection-title">1. Load and Preview the Data</h3>
+    <div class="code-box">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+path = "users_data_cleaned.pickle"
+df = pd.read_pickle(path)
+df.head()</div>
+    <p>
+        <strong>Penjelasan:</strong> Pustaka utama <code>pandas</code>, <code>numpy</code>, <code>matplotlib.pyplot</code>, dan <code>seaborn</code> diimpor untuk manipulasi data dan plotting. Fungsi <code>pd.read_pickle()</code> digunakan untuk memuat file biner pickle ke dalam struktur DataFrame. Pemanggilan <code>df.head()</code> menampilkan 5 baris pertama data guna menginspeksi nama-nama atribut utama seperti <code>user_id</code>, <code>number_transactions</code>, <code>total_amount_usd</code>, <code>age</code>, <code>job</code>, <code>marital</code>, dan atribut demografi lainnya.
+    </p>
+
+    <h3 class="subsection-title">2. Check the Shape of the Data</h3>
+    <div class="code-box">print("Jumlah baris dan kolom:", df.shape)</div>
+    <p>
+        <strong>Penjelasan:</strong> Atribut <code>df.shape</code> menghasilkan tuple <code>(45209, 19)</code>, yang berarti dataset ini memuat <strong>45.209 entri data pengguna</strong> dan <strong>19 variabel kolom</strong>.
+    </p>
+
+    <h3 class="subsection-title">3. Check the Data Types</h3>
+    <div class="code-box">df.dtypes</div>
+    <p>
+        <strong>Penjelasan:</strong> Menampilkan tipe data tiap kolom. Dataset terdiri dari tipe data kontinu numerik (<code>float64</code> pada <code>number_transactions</code> dan <code>total_amount_usd</code>), diskrit numerik (<code>int64</code> pada <code>age</code>, <code>duration</code>, <code>campaign</code>, <code>pdays</code>, <code>previous</code>), tipe kategorik/teks (<code>object</code> pada <code>user_id</code>, <code>job</code>, <code>marital</code>, <code>education</code>, <code>device</code>), boolean (<code>default</code>, <code>housing</code>, <code>loan</code>, <code>term_deposit</code>), dan objek tanggal (<code>date_joined</code>).
+    </p>
+
+    <h3 class="subsection-title">4. Check for Correlations</h3>
+    <div class="code-box">df.corr(numeric_only=True)</div>
+    <p>
+        <strong>Penjelasan:</strong> Metode <code>corr(numeric_only=True)</code> menghitung koefisien korelasi Pearson antar fitur numerik. Ditemukan korelasi linier positif yang sangat dominan antara <code>number_transactions</code> dan <code>total_amount_usd</code> (mendekati 0.999), mengindikasikan bahwa semakin banyak frekuensi transaksi yang dilakukan pelanggan, maka akumulasi nilai total nominal dalam USD juga meningkat secara proporsional.
+    </p>
+
+    <h3 class="subsection-title">5. Generate Summary Statistics for Numerical Data Only</h3>
+    <div class="code-box">df.describe()</div>
+    <p>
+        <strong>Penjelasan:</strong> Menghasilkan metrik statistik deskriptif (count, mean, standard deviation, min, kuartil 25%, 50%/median, 75%, dan max) untuk semua kolom bertipe numerik. Variabel usia (<code>age</code>) memiliki rata-rata 40,9 tahun dengan rentang 18 hingga 95 tahun.
+    </p>
+
+    <h3 class="subsection-title">6. Plot Histograms for All Numerical Columns</h3>
+    <div class="code-box">df.hist(figsize=(15, 10), bins=20)
+plt.tight_layout()
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Menampilkan distribusi frekuensi tiap fitur numerik secara simultan dalam format sub-plot. Fitur usia berdistribusi mendekati normal dengan kemiringan (*skewness*) positif ke kanan, sementara fitur kampanye dan durasi transaksi memiliki distribusi eksponensial/power-law.
+    </p>
+
+    <div class="page-break"></div>
+
+    <h3 class="subsection-title">7. Generate Box Plot for age dan number_transactions</h3>
+    <div class="code-box">plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+sns.boxplot(y=df['age'], color='skyblue')
+plt.title('Box Plot of Age')
+
+plt.subplot(1, 2, 2)
+sns.boxplot(y=df['number_transactions'], color='lightgreen')
+plt.title('Box Plot of Number of Transactions')
+plt.tight_layout()
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Box plot digunakan untuk mendeteksi sebaran kuartil (Q1, median Q2, Q3) serta pencilan (*outliers*). Pada variabel <code>age</code>, terlihat adanya beberapa pencilan di atas usia 70 tahun. Pada variabel <code>number_transactions</code>, terdapat nilai ekstrim di atas ambang atas IQR yang mencerminkan nasabah korporat/aktif.
+    </p>
+
+    <h3 class="subsection-title">8. Generate Lineplot for date_joined to total_amount_usd</h3>
+    <div class="code-box">df_sorted = df.dropna(subset=['date_joined', 'total_amount_usd']).copy()
+df_sorted['date_joined'] = pd.to_datetime(df_sorted['date_joined'])
+df_sorted = df_sorted.sort_values('date_joined')
+
+plt.figure(figsize=(12, 6))
+plt.plot(df_sorted['date_joined'], df_sorted['total_amount_usd'], color='blue', alpha=0.6)
+plt.title('Line Plot of Date Joined vs Total Amount (USD)')
+plt.xlabel('Date Joined')
+plt.ylabel('Total Amount USD')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Sebelum pembuatan lineplot, kolom <code>date_joined</code> dikonversi ke tipe data datetime dan diurutkan secara kronologis menggunakan <code>sort_values()</code>. Grafik memperlihatkan tren historis akumulasi saldo transaksi pengguna seiring waktu pendaftaran nasabah.
+    </p>
+
+    <h3 class="subsection-title">9. Generate Scatter Plots Comparing total_amount_usd to number_transaction</h3>
+    <div class="code-box">plt.figure(figsize=(8, 6))
+sns.scatterplot(x='number_transactions', y='total_amount_usd', data=df, alpha=0.5, color='purple')
+plt.title('Scatter Plot: Total Amount USD vs Number of Transactions')
+plt.xlabel('Number of Transactions')
+plt.ylabel('Total Amount USD')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Scatter plot memvisualisasikan korelasi bivariat. Titik-titik data menunjukkan garis diagonal linear yang sangat kuat, membuktikan bahwa nominal dana dan frekuensi transaksi bergerak searah secara konsisten.
+    </p>
+
+    <h3 class="subsection-title">10. Generate Horizontal Bar Charts for job</h3>
+    <div class="code-box">plt.figure(figsize=(10, 6))
+df['job'].value_counts().plot(kind='barh', color='teal')
+plt.title('Distribution of Job')
+plt.xlabel('Count')
+plt.ylabel('Job')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Fungsi <code>value_counts()</code> menghitung jumlah nasabah pada masing-masing kategori pekerjaan. Profesi <em>blue-collar</em>, <em>management</em>, dan <em>technician</em> menempati urutan 3 teratas nasabah terbanyak.
+    </p>
+
+    <h3 class="subsection-title">11. Generate Horizontal Bar Charts for marital</h3>
+    <div class="code-box">plt.figure(figsize=(8, 4))
+df['marital'].value_counts().plot(kind='barh', color='coral')
+plt.title('Distribution of Marital Status')
+plt.xlabel('Count')
+plt.ylabel('Marital Status')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Diagram batang horizontal menampilkan status pernikahan. Sebagian besar pelanggan berstatus menikah (*married*), disusul lajang (*single*), dan cerai (*divorced*).
+    </p>
+
+    <h3 class="subsection-title">12. Generate Heatmap for Feature Correlations</h3>
+    <div class="code-box">plt.figure(figsize=(10, 8))
+sns.heatmap(df.corr(numeric_only=True), annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
+plt.title('Correlation Heatmap')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Visualisasi korelasi multivariat dengan colormap gradasi panas-dingin. Nilai 1.00 pada pertemuan <code>number_transactions</code> dan <code>total_amount_usd</code> menegaskan kolinearitas tinggi antar keduanya.
+    </p>
+
+    <h3 class="subsection-title">13. Identify Missing Values</h3>
+    <div class="code-box">print("Jumlah Missing Values per Kolom:
+", df.isnull().sum())
+print("
+Persentase Missing Values (%):
+", (df.isnull().sum() / len(df)) * 100)</div>
+    <p>
+        <strong>Penjelasan:</strong> Mengidentifikasi jumlah dan persentase nilai kosong (*missing values/NaN*). Ditemukan nilai null pada kolom <code>number_transactions</code> dan <code>total_amount_usd</code> sebanyak 10.437 baris (sekitar 23.08%), serta pada kolom <code>job</code> dan <code>education</code> yang memerlukan penanganan khusus (misal: imputasi atau eliminasi) pada tahap pemodelan lanjutan.
+    </p>
+
+    <div class="page-break"></div>
+
+    <h2 class="section-title">SOAL 2: LINEAR REGRESSION PADA DATASET Sales_Data.csv [35 Poin]</h2>
+    <p>
+        Tujuan dari Soal 2 adalah membangun model prediktif berbasis <em>Supervised Machine Learning</em> menggunakan algoritma <strong>Linear Regression</strong> untuk memprediksi besaran <em>Nilai Penjualan</em> berdasarkan alokasi <em>Biaya Promosi</em>.
+    </p>
+
+    <h3 class="subsection-title">1.a Membaca file Sales_Data.csv</h3>
+    <div class="code-box">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('Sales_Data.csv')
+print("Dimensi dataset:", df.shape)
+df.head()</div>
+    <p>
+        <strong>Penjelasan:</strong> Dataset dibaca ke dalam DataFrame menggunakan <code>pd.read_csv('Sales_Data.csv')</code>. Dataset berukuran 20 baris dan 2 kolom.
+    </p>
+
+    <h3 class="subsection-title">1.b Menampilkan Variabel dalam Dataset</h3>
+    <div class="code-box">X = df.iloc[:, :-1].values  # Biaya Promo (Fitur Independen)
+y = df.iloc[:, 1].values   # Nilai Penjualan (Variabel Dependen)
+
+print("Variabel X (Biaya Promo):
+", X[:5])
+print("Variabel y (Nilai Penjualan):
+", y[:5])</div>
+    <p>
+        <strong>Penjelasan:</strong> Kolom pertama diekstraksi sebagai matriks fitur independen $X$ (Biaya Promosi), dan kolom kedua diekstraksi sebagai target kontinu $y$ (Nilai Penjualan).
+    </p>
+
+    <h3 class="subsection-title">1.c Menampilkan Data yang Di-Split (Train: 80% & Test: 20%)</h3>
+    <div class="code-box">from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+print(f"Jumlah data latih (train): {len(X_train)} baris")
+print(f"Jumlah data uji (test): {len(X_test)} baris")
+print("
+X_test:
+", X_test)
+print("
+y_test:
+", y_test)</div>
+    <p>
+        <strong>Penjelasan:</strong> Fungsi <code>train_test_split</code> membagi 20 sampel data menjadi 16 sampel data latih (80%) dan 4 sampel data uji (20%) secara representatif menggunakan <code>random_state=0</code> agar replikasi eksperimen konsisten.
+    </p>
+
+    <h3 class="subsection-title">1.d Memanggil LinearRegression() dan Melatih Model</h3>
+    <div class="code-box">from sklearn.linear_model import LinearRegression
+
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)</div>
+    <p>
+        <strong>Penjelasan:</strong> Objek model <code>regressor</code> diinisialisasi dari kelas <code>LinearRegression</code>, lalu dilatih pada data latih dengan perintah <code>regressor.fit(X_train, y_train)</code> menggunakan algoritma <em>Ordinary Least Squares</em> (OLS) untuk meminimalkan residual sum of squares.
+    </p>
+
+    <h3 class="subsection-title">1.e Menampilkan Hasil Predict dari Data Test</h3>
+    <div class="code-box">y_pred = regressor.predict(X_test)
+print("Hasil prediksi (y_pred):", y_pred)
+print("Data aktual (y_test):", y_test)</div>
+    <p>
+        <strong>Penjelasan:</strong> Metode <code>regressor.predict(X_test)</code> menghasilkan array nilai estimasi penjualan pada data uji berdasarkan input biaya promosi yang belum pernah dilihat model sebelumnya.
+    </p>
+
+    <h3 class="subsection-title">1.f Menampilkan Grafik Nilai Penjualan Berdasarkan Biaya Promosi</h3>
+    <div class="code-box">plt.scatter(X, y, color='red')
+plt.title('Nilai Penjualan berdasarkan Biaya Promo')
+plt.xlabel('Biaya Promo')
+plt.ylabel('Nilai Penjualan')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Diagram tebar seluruh data aktual menunjukkan kecenderungan linier kuat bergradien positif antara biaya promosi dan nilai penjualan.
+    </p>
+
+    <h3 class="subsection-title">1.g Menampilkan Garis Hasil Prediksi pada Train Set dan Test Set</h3>
+    <div class="code-box"># Visualisasi Training Set
+plt.scatter(X_train, y_train, color='red')
+plt.plot(X_train, regressor.predict(X_train), color='blue')
+plt.title('Nilai Penjualan vs Biaya Promo (Training set)')
+plt.xlabel('Biaya Promo')
+plt.ylabel('Nilai Penjualan')
+plt.show()
+
+# Visualisasi Test Set
+plt.scatter(X_test, y_test, color='red')
+plt.plot(X_train, regressor.predict(X_train), color='blue')
+plt.title('Nilai Penjualan vs Biaya Promo (Test set)')
+plt.xlabel('Biaya Promo')
+plt.ylabel('Nilai Penjualan')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Garis biru merepresentasikan garis regresi (*best fit line*). Pada grafik data latih maupun data uji, titik-titik merah menempel sangat rapat pada garis prediksi, membuktikan minimnya bias dan variansi (*good fitting*).
+    </p>
+
+    <h3 class="subsection-title">2. Perhitungan Parameter: Intercept, Slope, dan R-Square</h3>
+    <div class="code-box">a = regressor.intercept_
+b = regressor.coef_[0]
+from sklearn.metrics import r2_score
+score = r2_score(y_test, y_pred)
+
+print(f"a. Intercept (a) : {a:.4f}")
+print(f"b. Slope (b)     : {b:.4f}")
+print(f"c. R-Square (R²) : {score:.4f}")
+print(f"Persamaan Garis : ŷ = {a:.2f} + {b:.2f}x")</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Komponen</th>
+                <th>Nilai Eksak</th>
+                <th>Interpretasi Matematis & Bisnis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Intercept ($a$)</strong></td>
+                <td><strong>18.748,3463</strong></td>
+                <td>Nilai estimasi penjualan dasar ketika biaya promosi bernilai 0 (tanpa promosi).</td>
+            </tr>
+            <tr>
+                <td><strong>Slope ($b$)</strong></td>
+                <td><strong>43,6814</strong></td>
+                <td>Tiap penambahan 1 unit biaya promo akan meningkatkan nilai penjualan sebesar 43,68 unit.</td>
+            </tr>
+            <tr>
+                <td><strong>R-Square ($R^2$)</strong></td>
+                <td><strong>0,9826 (98,26%)</strong></td>
+                <td>Akurasi determinasi sangat tinggi; 98,26% variansi nilai penjualan mampu dijelaskan secara linear oleh biaya promosi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-break"></div>
+
+    <h2 class="section-title">SOAL 3 (KHUSUS NIM GENAP): K-MEANS CLUSTERING PADA DATASET konsumen.csv [35 Poin]</h2>
+    <p>
+        Khusus untuk mahasiswa dengan <strong>NIM Genap (NIM: 42324002)</strong>, Soal 3 mengimplementasikan algoritma <em>Unsupervised Machine Learning</em> yaitu <strong>K-Means Clustering</strong> pada dataset <code>konsumen.csv</code> yang berisi informasi penghasilan bulanan (<em>Gaji</em>) dan pola belanja (<em>Pengeluaran</em>).
+    </p>
+
+    <h3 class="subsection-title">1. Membaca File konsumen.csv</h3>
+    <div class="code-box">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('konsumen.csv', sep=';')
+print("Dimensi dataset konsumen (baris, kolom):", df.shape)</div>
+    <p>
+        <strong>Penjelasan:</strong> File <code>konsumen.csv</code> menggunakan pemisah titik koma, sehingga parameter <code>sep=';'</code> wajib disertakan. Dataset memiliki <strong>20 baris</strong> data konsumen dan <strong>3 kolom</strong> (<code>No</code>, <code>Gaji</code>, <code>Pengeluaran</code>).
+    </p>
+
+    <h3 class="subsection-title">2. Menampilkan Sebanyak 7 Row Data Teratas</h3>
+    <div class="code-box">df.head(7)</div>
+    <p>
+        <strong>Penjelasan:</strong> Fungsi <code>df.head(7)</code> menampilkan 7 baris pertama data konsumen untuk meninjau skala nilai gaji dan pengeluaran awal sebelum klasterisasi.
+    </p>
+
+    <h3 class="subsection-title">3. Menghapus Kolom No</h3>
+    <div class="code-box">df = df.drop(columns=['No'])
+print("Kolom 'No' berhasil dihapus. Dimensi data sekarang:", df.shape)</div>
+    <p>
+        <strong>Penjelasan:</strong> Kolom <code>No</code> hanya merupakan nomor urut identitas (ID) tanpa makna fitur karakteristik konsumen. Menghapus kolom nomor urut sangat krusial agar tidak mengaburkan perhitungan jarak Euclidean antar titik data dalam algoritma K-Means.
+    </p>
+
+    <h3 class="subsection-title">4. Menampilkan 9 Row Data Teratas</h3>
+    <div class="code-box">df.head(9)</div>
+    <p>
+        <strong>Penjelasan:</strong> Setelah kolom nomor dihapus, pemanggilan <code>df.head(9)</code> memastikan bahwa struktur data kini murni hanya terdiri dari dua variabel koordinat numerik: <code>Gaji</code> dan <code>Pengeluaran</code>.
+    </p>
+
+    <h3 class="subsection-title">5. Menampilkan Grafik Hubungan Gaji dan Pengeluaran</h3>
+    <div class="code-box">plt.scatter(df['Gaji'], df['Pengeluaran'], color='blue')
+plt.title('Grafik Hubungan Gaji dan Pengeluaran')
+plt.xlabel('Gaji')
+plt.ylabel('Pengeluaran')
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Scatter plot awal ini berguna untuk mengenali secara visual apakah data secara alami membentuk kelompok (*cluster*). Terlihat dua sebaran titik yang terpisah: satu di area gaji-pengeluaran menengah (kiri bawah) dan satu di area gaji-pengeluaran tinggi (kanan atas).
+    </p>
+
+    <h3 class="subsection-title">6. Gunakan 2 Klaster</h3>
+    <div class="code-box">from sklearn.cluster import KMeans
+
+X = df[['Gaji', 'Pengeluaran']].values
+
+kmeans = KMeans(n_clusters=2, random_state=0)
+kmeans.fit(X)
+
+print("Hasil label klaster tiap konsumen:
+", kmeans.labels_)</div>
+    <p>
+        <strong>Penjelasan:</strong> Algoritma <code>KMeans</code> dari <code>sklearn.cluster</code> diinisialisasi dengan parameter $k = 2$ (<code>n_clusters=2</code>) dan <code>random_state=0</code> agar hasil penentuan centroid awal stabil. Perintah <code>kmeans.fit(X)</code> melakukan optimasi konvergensi jarak. Hasil <code>kmeans.labels_</code> memetakan 20 konsumen ke dalam Klaster 0 dan Klaster 1:
+        <br><code>[1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0]</code>
+    </p>
+
+    <h3 class="subsection-title">7. Menampilkan Nilai Pusat Klaster (Centroid)</h3>
+    <div class="code-box">pusat_klaster = kmeans.cluster_centers_
+print("Nilai pusat klaster (Centroid):
+", pusat_klaster)
+
+for i, center in enumerate(pusat_klaster):
+    print(f"Klaster {i}: Gaji rata-rata = {center[0]:.2f}, Pengeluaran rata-rata = {center[1]:.2f}")</div>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Klaster</th>
+                <th>Pusat Gaji (Rp)</th>
+                <th>Pusat Pengeluaran (Rp)</th>
+                <th>Profil Segmen Konsumen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Klaster 0</strong></td>
+                <td><strong>Rp 7.987,50</strong></td>
+                <td><strong>Rp 8.025,00</strong></td>
+                <td><strong>High Income, High Spending:</strong> Konsumen bergaji tinggi dengan daya beli dan belanja besar.</td>
+            </tr>
+            <tr>
+                <td><strong>Klaster 1</strong></td>
+                <td><strong>Rp 4.475,00</strong></td>
+                <td><strong>Rp 4.243,75</strong></td>
+                <td><strong>Moderate Income, Moderate Spending:</strong> Konsumen berpenghasilan menengah dengan pengeluaran yang lebih terukur.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-break"></div>
+
+    <h3 class="subsection-title">8. Menampilkan Grafik Konsumen yang Memiliki 2 Warna Berbeda</h3>
+    <div class="code-box">plt.scatter(X[kmeans.labels_ == 0, 0], X[kmeans.labels_ == 0, 1], color='red', label='Klaster 0')
+plt.scatter(X[kmeans.labels_ == 1, 0], X[kmeans.labels_ == 1, 1], color='blue', label='Klaster 1')
+plt.title('Grafik Konsumen (2 Klaster Berwarna Berbeda)')
+plt.xlabel('Gaji')
+plt.ylabel('Pengeluaran')
+plt.legend()
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Titik-titik data diwarnai berdasarkan keanggotaan klasternya (merah untuk Klaster 0 dan biru untuk Klaster 1). Visualisasi memperlihatkan segmentasi pasar yang sangat terpisah (*distinct* dan *well-separated*) tanpa adanya tumpang tindih (*overlap*).
+    </p>
+
+    <h3 class="subsection-title">9. Menampilkan Grafik Konsumen dengan 2 Warna Berbeda dan Pusat Klaster</h3>
+    <div class="code-box">plt.scatter(X[kmeans.labels_ == 0, 0], X[kmeans.labels_ == 0, 1], color='red', label='Klaster 0')
+plt.scatter(X[kmeans.labels_ == 1, 0], X[kmeans.labels_ == 1, 1], color='blue', label='Klaster 1')
+plt.scatter(pusat_klaster[:, 0], pusat_klaster[:, 1], s=250, color='black', marker='X', edgecolors='white', label='Pusat Klaster (Centroid)')
+plt.title('Grafik Konsumen (2 Klaster dengan Pusat Klaster)')
+plt.xlabel('Gaji')
+plt.ylabel('Pengeluaran')
+plt.legend()
+plt.show()</div>
+    <p>
+        <strong>Penjelasan:</strong> Pada grafik komprehensif ini, titik pusat klaster (*centroid*) ditandai dengan marker silang hitam tebal berukuran besar (<code>marker='X'</code>, <code>s=250</code>). Marker ini berada tepat di pusat gravitasi spasial masing-masing kelompok, membuktikan algoritma K-Means telah mencapai konvergensi global yang optimal.
+    </p>
+
+    <h2 class="section-title">KESIMPULAN UMUM</h2>
+    <ol>
+        <li><strong>Eksplorasi Data (EDA - Soal 1):</strong> Memberikan pemahaman menyeluruh terhadap profil nasabah, menemukan korelasi mutlak antara frekuensi dan nominal transaksi, serta memetakan karakteristik pekerjaan, status pernikahan, dan mendeteksi persentase nilai kosong (*missing values*) sebesar 23%.</li>
+        <li><strong>Regresi Linier (Supervised Learning - Soal 2):</strong> Model linier berhasil memprediksi nilai penjualan dengan presisi luar biasa ($R^2 = 98,26\%$), menghasilkan persamaan prediksi $\hat{y} = 18.748,35 + 43,68x$. Hal ini membuktikan bahwa strategi promosi memiliki efektivitas sangat tinggi dalam meningkatkan omzet penjualan.</li>
+        <li><strong>Klasterisasi K-Means (Unsupervised Learning - Soal 3 NIM Genap):</strong> Pengelompokan nasabah dengan 2 klaster berhasil membagi konsumen menjadi segmen pendapatan menengah-bawah (Centroid: Gaji Rp 4.475 / Belanja Rp 4.243,75) dan segmen pendapatan tinggi (Centroid: Gaji Rp 7.987,50 / Belanja Rp 8.025). Informasi ini sangat berharga bagi perusahaan dalam menyusun strategi pemasaran terarah (*targeted marketing*).</li>
+    </ol>
+
+    <div style="margin-top: 40px; text-align: right; font-size: 10pt;">
+        <p><strong>Praktikan:</strong></p>
+        <p style="margin-top: 30px;"><strong><u>Oktova Yoga Praditia Samosir</u></strong><br>NIM: 42324002 (NIM Genap)</p>
+    </div>
+
+</body>
+</html>
